@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @email_swap.name %>
+</p>
+
+<p>
+  <strong>Folder:</strong>
+  <%= @email_swap.folder %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @email_swap.subject %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @email_swap.message %>
+</p>
+
+<%= link_to 'Edit', edit_email_swap_path(@email_swap) %> |
+<%= link_to 'Back', email_swaps_path %>
