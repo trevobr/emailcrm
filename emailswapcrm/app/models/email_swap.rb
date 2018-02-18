@@ -1,0 +1,2 @@
+class EmailSwap < ApplicationRecord
+end

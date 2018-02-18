@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Email Swaps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Folder</th>
+      <th>Subject</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @email_swaps.each do |email_swap| %>
+      <tr>
+        <td><%= email_swap.name %></td>
+        <td><%= email_swap.folder %></td>
+        <td><%= email_swap.subject %></td>
+        <td><%= email_swap.message %></td>
+        <td><%= link_to 'Show', email_swap %></td>
+        <td><%= link_to 'Edit', edit_email_swap_path(email_swap) %></td>
+        <td><%= link_to 'Destroy', email_swap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Email Swap', new_email_swap_path %>
